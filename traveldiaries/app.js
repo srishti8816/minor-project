@@ -5,11 +5,9 @@ import userRouter from "./routing/user-routes";
 import postRouter from "./routing/post-routes";
 import cors from "cors";
 
-
-
 const app = express();
 dotenv.config();
-const PORT =process.env.PORT || 3000
+
 //middlewares
 app.use(cors({
   origin: ["http://localhost:3000"]
