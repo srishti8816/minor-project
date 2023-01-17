@@ -19,7 +19,8 @@
     "github": "^14.0.0",
     "mongodb": "^4.12.1",
     "mongoose": "^6.8.0",
-    "react-router-dom": "^6.4.5"
+    "react-router-dom": "^6.4.5",
+    "start":"node app.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.10",
