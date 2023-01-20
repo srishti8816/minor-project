@@ -16,15 +16,17 @@ app.use(express.json());
 app.use("/user", userRouter);
 app.use("/posts", postRouter);
 
+const port =process.env.PORT || 5000;
+
 // connections
 mongoose.set('strictQuery',true)
 
 mongoose
-  .connect(`mongodb+srv://adminn:Wl6TY1Nuf3zH1wNW@cluster0.qaraq4r.mongodb.net/?retryWrites=true&w=majority`
+  .connect(`mongodb+srv://adminn:${process.env.MONGODB_PASSWORD}@cluster0.qaraq4r.mongodb.net/?retryWrites=true&w=majority`
    )
   .then(() =>
     app.listen(5000, () =>
-      console.log("Connection Succesfull  & Listening to localhost Port 5000")
+      console.log(`Connection Succesfull  & Listening to localhost Port ${port}`)
     )
   )
   .catch((err) => console.log(err));
